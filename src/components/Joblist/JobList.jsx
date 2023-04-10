@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import List from '../List/List';
+
 
 const JobList = () => {
+    const [joblist,setJoblist] = useState([]);
+
+    useEffect(()=>{
+        fetch('joblist.json')
+        .then(res=>res.json())
+        .then(data=> setJoblist(data))
+    },[])
     return (
-        <div>
+        <div className='mt-10'>
             <h1 className='text-center font-bold text-4xl'>Job Category List</h1>
-            <p className='text-center'>Explore thousands of job opportunities with all the information you need. Its your future</p>
+            <p className='text-center my-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
             <div className='flex gap-x-3 justify-center'>
-                <div>a</div>
-                <div>b</div>
-                <div>c</div>
-                <div>d</div>
+                {
+                    joblist.map(list=> <List
+                    key={list.id}
+                    list={list}
+                    ></List>)
+                }
             </div>
         </div>
     );
