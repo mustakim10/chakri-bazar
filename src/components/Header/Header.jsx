@@ -7,6 +7,7 @@ const Header = () => {
             <h2 className='font-bold text-4xl'>Chakri Bazar</h2>
             <nav className='space-x-5 flex items-center'>
                 <Link to="/">Home</Link>
+                <Link to="/details">Job Details</Link>
                 <Link to="/statistics">Statistics</Link>
                 <Link to="/jobs">Applied Jobs</Link>
                 <Link to="/blog">Blog</Link>

@@ -8,26 +8,42 @@ import {
 } from "react-router-dom";
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
+import JobDetails from './components/JobDetails/JobDetails';
+import Default from './components/Default/Default';
+import AppliedJobs from './components/AppliedJobs/AppliedJobs';
+import Statistics from './components/Statistics/Statistics';
+import Blog from './components/Blog/Blog';
+import featureJobsLoader from './components/loaders/featureJobsLoader';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home></Home> ,
+    element: <Default></Default>,
     children:[
       {
-        path: '/statistics',
-        element: <div>this is statistics</div>
+        path: '/',
+        element: <Home></Home>
       },
       {
-        path: '/jobs',
-        element: <div>jobs are coming</div>
+        path: '/details',
+        element: <JobDetails></JobDetails>,
+        loader: featureJobsLoader
       },
       {
-        path: '/blog',
-        element: <div>blogs are coming</div>
+        path: 'statistics',
+        element: <Statistics></Statistics>
+      },
+      {
+        path: 'jobs',
+        element: <AppliedJobs></AppliedJobs>
+      },
+      {
+        path: 'blog',
+        element: <Blog></Blog>
       }
     ]
   }
+
 ])
 
 
@@ -35,6 +51,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-  <RouterProvider router={router}></RouterProvider>
+  <RouterProvider router={router} />
    </React.StrictMode>,
 )
