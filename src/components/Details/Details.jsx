@@ -1,15 +1,29 @@
 import React from 'react';
 
 const Details = (props) => {
-//    const {jobTitle,company,location,salary,requirements,timeStatus,responsibility,experiences,description,status,companyImage} = props.detail;
+   const {jobTitle,company,location,salary,requirements,timeStatus,responsibility,experiences,description,status,companyImage} = props.detail;
     return (
         <div>
-            <h2>job Details</h2>
-            <section>
-                <div>
-                    <h2>Job Description :</h2>
+            
+            <section className='grid grid-cols-2 gap-5'>
+                <div className='border p-10'>
+                    <h2>Job Description :{description}</h2>
+                    <h2 className='my-3'>Job Responsibility : {responsibility}</h2>
+                    <h2>Education Requirements : {requirements}</h2>
+                    <h2 className='my-3'>Experiences : {experiences}</h2>
                 </div>
-                <div></div>
+                <div className='border p-10'>
+                    <div>
+                    <h2>Job Detail</h2>
+                    <p className='my-3'>Salary : {salary}</p>
+                    <p>Job-Title : {jobTitle}</p>
+                    <p className='my-3'>Contact Information</p>
+                    <p className='my-3'>Phone :</p>
+                    <p>Email :</p>
+                    <p className='my-3'>Address : {location}</p>
+                    </div>
+                    <p className='bg-violet-400 text-white px-3 rounded-md w-1/2 text-center p-2 font-bold	mx-auto'>Apply Now</p>
+                </div>
             </section>
         </div>
     );
