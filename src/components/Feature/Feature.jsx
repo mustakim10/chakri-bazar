@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Feature = (props) => {
-const {jobTitle,company,location,salary,requirements,timeStatus,responsibility,experiences,description,status,companyImage} = props.feature ;
+const {jobTitle,id,company,location,salary,requirements,timeStatus,responsibility,experiences,description,status,companyImage} = props.feature ;
 
 const handleAddToCart = props.handleAddToCart ;
 

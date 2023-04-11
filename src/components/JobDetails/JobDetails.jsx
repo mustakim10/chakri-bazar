@@ -4,7 +4,7 @@ import Details from '../Details/Details';
 
 const JobDetails = () => {
     const details = useLoaderData();
-    console.log(details);
+    // console.log(details);
     return (
         <div>
             <h1 className='font-bold text-5xl text-center my-20'>Job Details</h1>
