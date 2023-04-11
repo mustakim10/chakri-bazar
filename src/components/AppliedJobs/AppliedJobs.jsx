@@ -1,15 +1,26 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Applied from '../Applied/Applied';
+import { addToDb } from '../../utilities/fakedb';
 
 
 const AppliedJobs = () => {
-    const details = useLoaderData();
+    const appliedJobs = useLoaderData();
     
-    console.log(details);
+    
+    
     return (
         <div>
-            <h2>Applied jobs are comming </h2>
-          
+            <h2>Applied jobs </h2>
+          <div>
+            {
+                appliedJobs.map(applied => <Applied
+                key={applied.id}
+                applied={applied}
+               
+                ></Applied>)
+            }
+          </div>
         </div>
     );
 };
