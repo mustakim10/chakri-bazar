@@ -11,8 +11,8 @@ const AppliedJobs = () => {
     
     return (
         <div>
-            <h2>Applied jobs </h2>
-          <div>
+            <h2 className='fond-semibold text-4xl text-center my-20'>Applied jobs </h2>
+          <div className='border w-1/2 mx-auto p-5'>
             {
                 appliedJobs.map(applied => <Applied
                 key={applied.id}
