@@ -49,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: 'blog',
         element: <Blog></Blog>
+      },
+      {
+       path: '/*',
+       element: <div>Random ERROR 4444000000444444</div>
       }
     ]
   }

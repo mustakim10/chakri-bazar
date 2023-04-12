@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { addToDb, getShoppingCart } from '../../utilities/fakedb';
 import AppliedJobs from '../AppliedJobs/AppliedJobs';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { faLocationPin, faPhone ,faSms} from '@fortawesome/free-solid-svg-icons'
 
 const Details = (props) => {
     // const detail = useLoaderData();
@@ -24,14 +26,14 @@ const Details = (props) => {
                 </div>
                 <div className='border p-10 '>
                     <div className='bg-violet-100 p-5 rounded-lg mb-5'>
-                    <h2 className='font-bold'>Job Detail</h2>
+                    <h2 className='font-bold border-b-2 border-black'>Job Detail</h2>
                     <p className='my-3'><span className='font-bold'>Salary :</span> {salary}</p>
                     <p ><span className='font-bold'>Job-Title :</span> {jobTitle}</p>
                     <p className='my-3 font-bold border-b-2 border-black'>Contact Information</p>
                     
-                    <p className='my-3'><span className='font-bold'>Phone :</span> 011111111</p>
-                    <p><span className='font-bold'>Email :</span> ingi@gmail.com</p>
-                    <p className='my-3'><span className='font-bold'>Address :</span> {location}</p>
+                    <p className='my-3'><FontAwesomeIcon className='text-violet-400' icon={faPhone} /> <span className='font-bold'>Phone :</span> 011111111</p>
+                    <p><FontAwesomeIcon className='text-violet-400' icon={faSms} /> <span className='font-bold'>Email :</span> ingi@gmail.com</p>
+                    <p className='my-3'><FontAwesomeIcon className='text-violet-400' icon={faLocationPin} /> <span className='font-bold'>Address : </span> {location}</p>
                     </div>
                     <Link to="/jobs"><button  onClick={()=>handleAddToApplied(detail)} className='bg-violet-400 text-white px-3 rounded-md w-1/2 text-center p-2 font-bold	mx-auto'>Apply Now</button></Link>
                 </div>
