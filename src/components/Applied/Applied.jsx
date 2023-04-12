@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Applied = (props) => {
     const {jobTitle,company,location,salary,requirements,timeStatus,responsibility,experiences,description,status,companyImage} = props.applied ;
@@ -19,7 +20,7 @@ const Applied = (props) => {
                 <p className='text-slate-400	'>{salary}</p>
             </div>
             </div>
-            <button className='ms-7 bg-violet-400 h-10 p-2 text-white font-bold rounded-md '>View Details</button>
+            <Link to="/details"><button className='ms-7 bg-violet-400 h-10 p-2 text-white font-bold rounded-md '>View Details</button></Link>
         </div>
     );
 };

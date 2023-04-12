@@ -14,7 +14,7 @@ const JobList = () => {
         <div className='mt-10'>
             <h1 className='text-center font-bold text-4xl'>Job Category List</h1>
             <p className='text-center my-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-            <div className='flex gap-x-3 justify-center'>
+            <div className='md:flex gap-x-3 justify-center'>
                 {
                     joblist.map(list=> <List
                     key={list.id}

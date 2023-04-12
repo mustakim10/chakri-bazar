@@ -19,7 +19,7 @@ const handleAddToCart = (feature) => {
         <div className='mt-10 mx-auto'>
             <h1 className='font-bold text-4xl text-center'>Featured Jobs</h1>
 <p className='text-center text-slate-600 my-5'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-            <div className='grid grid-cols-2 gap-5 mx-auto'>
+            <div className='md:grid md:grid-cols-2 gap-5 mx-auto'>
                 {
                  featureJob.map(feature=> <Feature
                  key={feature.id}
