@@ -27,7 +27,8 @@ const Details = (props) => {
                     <h2 className='font-bold'>Job Detail</h2>
                     <p className='my-3'><span className='font-bold'>Salary :</span> {salary}</p>
                     <p ><span className='font-bold'>Job-Title :</span> {jobTitle}</p>
-                    <p className='my-3 font-bold'>Contact Information</p>
+                    <p className='my-3 font-bold border-b-2 border-black'>Contact Information</p>
+                    
                     <p className='my-3'><span className='font-bold'>Phone :</span> 011111111</p>
                     <p><span className='font-bold'>Email :</span> ingi@gmail.com</p>
                     <p className='my-3'><span className='font-bold'>Address :</span> {location}</p>
